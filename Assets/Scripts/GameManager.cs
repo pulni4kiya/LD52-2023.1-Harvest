@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour {
 
 	[Header("References")]
 	public PlayerController Player;
+	public PlayerLevelController LevelController;
 
 	public float Time => UnityEngine.Time.timeSinceLevelLoad;
 
@@ -20,13 +22,5 @@ public class GameManager : MonoBehaviour {
 
 	private void OnDestroy() {
 		Instance = null;
-	}
-
-	private void Start() {
-
-	}
-
-	private void Update() {
-
 	}
 }

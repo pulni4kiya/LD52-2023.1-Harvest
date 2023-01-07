@@ -15,6 +15,8 @@ public class MonsterController : MonoBehaviour {
 	private float maxHealth;
 	private float currentHealth;
 
+	private int xp;
+
 	public float DamagePerSecond { get; internal set; }
 
 	private void Start() {
@@ -30,6 +32,7 @@ public class MonsterController : MonoBehaviour {
 		this.DamagePerSecond = this.baseDamage + level / 5f;
 		this.maxHealth = this.baseHealth * (1f + (level - 1) / 10f) + (level - 1) * 2f;
 		this.currentHealth = this.maxHealth;
+		this.xp = 1;
 	}
 
 	public void TakeDamage(float damage) {
@@ -37,6 +40,7 @@ public class MonsterController : MonoBehaviour {
 		this.currentHealth = Mathf.Clamp(this.currentHealth, 0f, this.maxHealth);
 		if (this.currentHealth <= 0f) {
 			GameObject.Destroy(this.gameObject);
+			GameManager.Instance.LevelController.IncreasePlayerXp(this.xp);
 		}
 	}
 }
