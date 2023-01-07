@@ -482,8 +482,6 @@ MonoBehaviour:
   healthFill: {fileID: 494446253859244488}
   healthImage: {fileID: 494446253859244490}
   camera: {fileID: 494446254005368125}
-  health: 100
-  speed: 1
 --- !u!58 &494446254797411851
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -494,7 +492,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
