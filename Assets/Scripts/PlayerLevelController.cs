@@ -7,6 +7,7 @@ public class PlayerLevelController : MonoBehaviour {
 	[Header("References")]
 	[SerializeField] private RectTransform levelBarFill;
 	[SerializeField] private TMP_Text levelText;
+	[SerializeField] private RewardScreen rewardsScreen;
 
 	[Header("Data")]
 	[SerializeField] private List<int> xpPerLevel;
@@ -22,6 +23,7 @@ public class PlayerLevelController : MonoBehaviour {
 
 	private void Start() {
 		this.UpdateUI();
+		this.rewardsScreen.ShowRewards();
 	}
 
 	public void IncreasePlayerXp(int xp) {
@@ -46,6 +48,6 @@ public class PlayerLevelController : MonoBehaviour {
 	}
 
 	private void ShowLevelUpOptions() {
-
+		this.rewardsScreen.ShowRewards();
 	}
 }

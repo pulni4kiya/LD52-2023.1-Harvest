@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &361203688
 Transform:
   m_ObjectHideFlags: 0
@@ -44,9 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 560e5bc443c76794197e7203b287a9d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 15
+  baseDamage: 5
   baseCooldown: 4
   projectilePrefab: {fileID: 8187438143676349512, guid: 8d3ac743397112a42a0e5f93d7f671df, type: 3}
+  displayName: Grenade Launcher
+  description: Slowly launches grenades at target position which deal AOE
+  image: {fileID: 0}
   grenadePrefab: {fileID: 2876841299813115246, guid: 9b47fb084fa6e6144a2682241de07df8, type: 3}
   grenadeSpeed: 5
   camera: {fileID: 494446254005368125}
@@ -66,7 +69,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &629647274
 Transform:
   m_ObjectHideFlags: 0
@@ -94,9 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c815ba6c5e37a946885379657a99b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 12
-  baseCooldown: 0.7
+  baseDamage: 10
+  baseCooldown: 1.2
   projectilePrefab: {fileID: 3545173648091437423, guid: 7540788cda9cfc44fbd6a1979e54743a, type: 3}
+  displayName: Zombie Slash
+  description: Damages all enemies in a small cone in front of you
+  image: {fileID: 0}
 --- !u!1 &1755396381
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1755396382
 Transform:
   m_ObjectHideFlags: 0
@@ -141,9 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1760ba0acb7b204fad13e7f0ff411d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 6
+  baseDamage: 7
   baseCooldown: 1
   projectilePrefab: {fileID: 8187438143676349512, guid: 0733e0bb84af71e4bb5d79f3df05fbd5, type: 3}
+  displayName: Pistol
+  description: Fires bullets in the direction where you're looking
+  image: {fileID: 0}
 --- !u!1 &1783891332
 GameObject:
   m_ObjectHideFlags: 0

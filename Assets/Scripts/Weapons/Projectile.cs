@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour
 		this.rb.velocity = settings.Velocity;
 		this.settings = settings;
 		this.hitCount = 0;
+		this.transform.localScale = Vector3.one * settings.Size;
 
 		if (settings.SingleTickHit) {
 			StartCoroutine(DisableColliderAfterOneTick());
@@ -52,6 +53,7 @@ public struct ProjectileSettings {
 	public Vector2 Velocity;
 	public float DestroyAfterTime;
 	public bool SingleTickHit;
+	public float Size;
 }
 
 public struct ProjectileHitEventArgs {
