@@ -7,7 +7,8 @@ public class Slash : WeaponBase {
 		this.InstantiateProjectile(
 			new ProjectileSettings() {
 				Velocity = Vector3.zero,
-				DestroyAfterTime = 0.2f
+				DestroyAfterTime = 0.2f,
+				SingleTickHit = true,
 			},
 			GameManager.Instance.Player.ProjectileDirection
 		);

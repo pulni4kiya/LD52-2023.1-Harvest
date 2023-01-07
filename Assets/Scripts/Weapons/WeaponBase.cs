@@ -23,16 +23,16 @@ public abstract class WeaponBase : MonoBehaviour {
 
 	protected Projectile InstantiateProjectile(ProjectileSettings settings) {
 		var rotation = Quaternion.FromToRotation(Vector3.right, settings.Velocity);
-		return this.InstantiateProjectile(settings, rotation);
+		return this.InstantiateProjectile(settings, GameManager.Instance.Player.Position, rotation);
 	}
 
 	protected Projectile InstantiateProjectile(ProjectileSettings settings, Vector2 direction) {
 		var rotation = Quaternion.FromToRotation(Vector3.right, direction);
-		return this.InstantiateProjectile(settings, rotation);
+		return this.InstantiateProjectile(settings, GameManager.Instance.Player.Position, rotation);
 	}
 
-	private Projectile InstantiateProjectile(ProjectileSettings settings, Quaternion rotation) {
-		var projectile = GameObject.Instantiate(this.projectilePrefab, GameManager.Instance.Player.Position, rotation);
+	protected Projectile InstantiateProjectile(ProjectileSettings settings, Vector3 position, Quaternion rotation) {
+		var projectile = GameObject.Instantiate(this.projectilePrefab, position, rotation);
 		projectile.Init(settings);
 		projectile.OnHit += this.OnProjectileHit;
 		GameObject.Destroy(projectile.gameObject, settings.DestroyAfterTime);
