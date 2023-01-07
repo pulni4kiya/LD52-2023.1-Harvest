@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 	private const float TimeBetweenTakingHits = 0.25f;
 
+	[SerializeField] private float speed = 2f;
+
 	[Header("References")]
 	[SerializeField] private RectTransform healthFill;
 	[SerializeField] private Image healthImage;
@@ -19,8 +21,6 @@ public class PlayerController : MonoBehaviour {
 
 	private float maxHealth = 100f;
 
-	private float speed = 2f;
-
 	private List<MonsterController> monstersAttackingPlayer = new List<MonsterController>(20);
 
 	public Vector2 Direction { get; private set; }
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 
 	public Vector2 Position {
 		get {
-			return this.rb.position;
+			return this.transform.position;
 		}
 	}
 

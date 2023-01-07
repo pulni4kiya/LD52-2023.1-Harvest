@@ -103,6 +103,54 @@ MonoBehaviour:
   displayName: Zombie Slash
   description: Damages all enemies in a small cone in front of you
   image: {fileID: 0}
+--- !u!1 &1398678338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398678339}
+  - component: {fileID: 1398678340}
+  m_Layer: 0
+  m_Name: MapCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1398678339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398678338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 494446254797411854}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1398678340
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398678338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1755396381
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +399,7 @@ GameObject:
   - component: {fileID: 494446254005368125}
   - component: {fileID: 494446254005368127}
   - component: {fileID: 494446254005368124}
+  - component: {fileID: 566529988}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -400,7 +449,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -457,6 +506,19 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &566529988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494446254005368126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6e5fd427cac874e9cebf7c63304c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeOfMap: 50
 --- !u!1 &494446254136397588
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +693,7 @@ Transform:
   - {fileID: 494446254005368258}
   - {fileID: 494446254136397589}
   - {fileID: 1783891333}
+  - {fileID: 1398678339}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -654,7 +717,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &494446254797411848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f8b4b2959b40a409d05df641b5b601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
   healthFill: {fileID: 494446253859244488}
   healthImage: {fileID: 494446253859244490}
   camera: {fileID: 494446254005368125}
