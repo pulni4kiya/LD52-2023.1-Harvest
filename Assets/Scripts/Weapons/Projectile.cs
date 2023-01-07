@@ -38,6 +38,7 @@ public class Projectile : MonoBehaviour
 
 public struct ProjectileSettings {
 	public Vector2 Velocity;
+	public float DestroyAfterTime;
 }
 
 public struct ProjectileHitEventArgs {

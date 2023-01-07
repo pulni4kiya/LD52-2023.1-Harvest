@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class WeaponBase : MonoBehaviour {
-	[SerializeField] private Projectile projectilePrefab;
+	[SerializeField] protected float baseDamage;
+	[SerializeField] protected float baseCooldown = 1f;
+	[SerializeField] protected Projectile projectilePrefab;
 
-	protected float timeBetweenTriggers = 1f;
 	protected float timeSinceLastTrigger = 0f;
 
 	protected virtual void Start() {
@@ -14,25 +15,27 @@ public abstract class WeaponBase : MonoBehaviour {
 
 	protected virtual void Update() {
 		this.timeSinceLastTrigger += Time.deltaTime;
-		if (this.timeSinceLastTrigger > this.timeBetweenTriggers) {
-			this.timeSinceLastTrigger -= this.timeBetweenTriggers;
+		if (this.timeSinceLastTrigger > this.baseCooldown) {
+			this.timeSinceLastTrigger -= this.baseCooldown;
 			this.Trigger();
 		}
 	}
 
-	protected Projectile InstantiateProjectile(ProjectileSettings settings, bool autoOffset) {
-		var position = GameManager.Instance.Player.Position;
-		if (autoOffset) {
-			position += settings.Velocity.normalized * 0.5f;
-		}
+	protected Projectile InstantiateProjectile(ProjectileSettings settings) {
 		var rotation = Quaternion.FromToRotation(Vector3.right, settings.Velocity);
-		return this.InstantiateProjectile(settings, position, rotation);
+		return this.InstantiateProjectile(settings, rotation);
 	}
 
-	protected Projectile InstantiateProjectile(ProjectileSettings settings, Vector3 position, Quaternion rotation) {
-		var projectile = GameObject.Instantiate(this.projectilePrefab, position, rotation);
+	protected Projectile InstantiateProjectile(ProjectileSettings settings, Vector2 direction) {
+		var rotation = Quaternion.FromToRotation(Vector3.right, direction);
+		return this.InstantiateProjectile(settings, rotation);
+	}
+
+	private Projectile InstantiateProjectile(ProjectileSettings settings, Quaternion rotation) {
+		var projectile = GameObject.Instantiate(this.projectilePrefab, GameManager.Instance.Player.Position, rotation);
 		projectile.Init(settings);
 		projectile.OnHit += this.OnProjectileHit;
+		GameObject.Destroy(projectile.gameObject, settings.DestroyAfterTime);
 		return projectile;
 	}
 
