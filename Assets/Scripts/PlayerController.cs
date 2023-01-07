@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
+	private const float TimeBetweenTakingHits = 0.25f;
+
 	[Header("References")]
 	[SerializeField] private RectTransform healthFill;
 	[SerializeField] private Image healthImage;
@@ -14,9 +16,12 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D rb;
 
 	private float health = 100f;
+
 	private float maxHealth = 100f;
 
 	private float speed = 2f;
+
+	private List<MonsterController> monstersAttackingPlayer = new List<MonsterController>(20);
 
 	public Vector2 Direction { get; private set; }
 
@@ -33,7 +38,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Start() {
-
+		StartCoroutine(this.PeriodicTakeDamage());
 	}
 
 	private void Update() {
@@ -50,5 +55,45 @@ public class PlayerController : MonoBehaviour {
 		var fill = this.health / this.maxHealth;
 		this.healthFill.anchorMax = new Vector2(fill, 1f);
 		this.healthImage.color = HSBColor.Lerp(Color.red, Color.green, fill);
+	}
+
+	private void OnTriggerEnter2D(Collider2D collider) {
+		if (collider.isTrigger == false) {
+			return;
+		}
+
+		var monster = collider.GetComponent<MonsterController>();
+		if (monster != null) {
+			this.TakeDamage(monster);
+			this.monstersAttackingPlayer.Add(monster);
+			//Debug.Log($"Damaging monsters: {this.monstersAttackingPlayer.Count}");
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collider) {
+		if (collider.isTrigger == false) {
+			return;
+		}
+
+		var monster = collider.GetComponent<MonsterController>();
+		if (monster != null) {
+			this.monstersAttackingPlayer.Remove(monster);
+			//Debug.Log($"Damaging monsters: {this.monstersAttackingPlayer.Count}");
+		}
+	}
+
+	private void TakeDamage(MonsterController monster) {
+		this.health -= monster.DamagePerSecond * TimeBetweenTakingHits;
+		this.health = Mathf.Clamp(this.health, 0f, this.maxHealth);
+	}
+
+	private IEnumerator PeriodicTakeDamage() {
+		var wait = new WaitForSeconds(TimeBetweenTakingHits);
+		while (true) {
+			foreach (var monster in this.monstersAttackingPlayer) {
+				this.TakeDamage(monster);
+			}
+			yield return wait;
+		}
 	}
 }
