@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 
 	private void Update() {
 		this.Direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-		this.ProjectileDirection = this.camera.ScreenToWorldPoint(Input.mousePosition);
+		this.ProjectileDirection = (this.camera.ScreenToWorldPoint(Input.mousePosition) - this.transform.position).normalized;
 		this.UpdateUI();
 	}
 

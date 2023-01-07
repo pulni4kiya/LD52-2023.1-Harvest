@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7268076642216424837}
   - component: {fileID: 7268076642216424838}
   - component: {fileID: -63525313293590887}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 1
+  baseDamage: 1
+  baseHealth: 10
 --- !u!50 &7268076642216424837
 Rigidbody2D:
   serializedVersion: 4
@@ -111,7 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7268076642605456166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7268076643303681257}
   - component: {fileID: 7268076643303681256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
