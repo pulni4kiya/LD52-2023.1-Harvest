@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private RectTransform healthFill;
 	[SerializeField] private Image healthImage;
 	[SerializeField] private Camera camera;
+	[SerializeField] private SpriteRenderer spriteRenderer;
 
 	private Rigidbody2D rb;
 
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour {
 	private void Update() {
 		this.Direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 		this.ProjectileDirection = ((Vector2)this.camera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)this.transform.position).normalized;
+		this.spriteRenderer.flipX = this.ProjectileDirection.x < 0f;
 		this.UpdateUI();
 	}
 

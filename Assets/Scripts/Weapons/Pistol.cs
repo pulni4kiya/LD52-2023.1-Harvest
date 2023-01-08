@@ -22,7 +22,7 @@ public class Pistol : WeaponBase {
 
 	protected override void OnProjectileHit(ProjectileHitEventArgs args) {
 		this.DealDamageToMonster(args.Monster, this.damage);
-		if (args.HitCount >= this.pierce) {
+		if (args.HitCount > this.pierce) {
 			this.DestroyProjectile(args.Projectile);
 		}
 	}

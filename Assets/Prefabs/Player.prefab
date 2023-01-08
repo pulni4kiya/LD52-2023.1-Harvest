@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398678339}
-  - component: {fileID: 1398678340}
+  - component: {fileID: 6607501135332841184}
   m_Layer: 0
   m_Name: MapCollider
   m_TagString: Untagged
@@ -135,8 +135,8 @@ Transform:
   m_Father: {fileID: 494446254797411854}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1398678340
-CircleCollider2D:
+--- !u!61 &6607501135332841184
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,9 +148,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.18, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.88, y: 1.88}
+  m_EdgeRadius: 0
 --- !u!1 &1755396381
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.7}
+  m_AnchoredPosition: {x: -0.113, y: -1.122}
   m_SizeDelta: {x: 1.04, y: 0.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &494446254136397592
@@ -669,7 +679,7 @@ GameObject:
   - component: {fileID: 494446254797411854}
   - component: {fileID: 494446254797411849}
   - component: {fileID: 494446254797411848}
-  - component: {fileID: 494446254797411851}
+  - component: {fileID: 3431010378351452682}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -734,8 +744,9 @@ MonoBehaviour:
   healthFill: {fileID: 494446253859244488}
   healthImage: {fileID: 494446253859244490}
   camera: {fileID: 494446254005368125}
---- !u!58 &494446254797411851
-CircleCollider2D:
+  spriteRenderer: {fileID: 494446255711921183}
+--- !u!61 &3431010378351452682
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -747,9 +758,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.18, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.88, y: 1.88}
+  m_EdgeRadius: 0
 --- !u!1 &494446255711921177
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +782,7 @@ GameObject:
   - component: {fileID: 494446255711921182}
   - component: {fileID: 494446255711921183}
   m_Layer: 8
-  m_Name: Circle
+  m_Name: Guy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,7 +844,7 @@ SpriteRenderer:
   m_SortingLayerID: 29376557
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4eb4f08b2f244458b6c4eacb88f16c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

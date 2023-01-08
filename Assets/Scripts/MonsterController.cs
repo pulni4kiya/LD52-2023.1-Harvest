@@ -9,6 +9,9 @@ public class MonsterController : MonoBehaviour {
 	[SerializeField] private float baseDamage = 1f;
 	[SerializeField] private float baseHealth = 10f;
 
+	[Header("References")]
+	[SerializeField] private Transform visual;
+
 	private Rigidbody2D rb;
 	private PlayerController player;
 
@@ -26,6 +29,10 @@ public class MonsterController : MonoBehaviour {
 
 	private void FixedUpdate() {
 		this.rb.velocity = (this.player.Position - this.rb.position).normalized * this.baseSpeed;
+	}
+
+	private void Update() {
+		this.visual.rotation = Quaternion.FromToRotation(Vector3.right, GameManager.Instance.Player.Position - (Vector2)this.transform.position);
 	}
 
 	public void ScaleForLevel(int level) {
