@@ -35,7 +35,7 @@ public class MusicManager : MonoBehaviour {
 		var enableSounds = PlayerPrefs.GetInt("Sounds", 1) == 1;
 
 		AudioManager2D.instance.enableSounds = enableSounds;
-		this.musicVolumeMp = PlayerPrefs.GetFloat("Music");
+		this.musicVolumeMp = PlayerPrefs.GetFloat("Music", 1f);
 
 		this.soundsToggle.isOn = enableSounds;
 		this.musicToggle.isOn = this.musicVolumeMp > 0.01f;
