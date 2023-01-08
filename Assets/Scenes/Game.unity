@@ -1194,7 +1194,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410940671}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &165667879
 MonoBehaviour:
@@ -1210,12 +1210,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterPrefab: {fileID: 7268076642216424836, guid: 00b74cd33d086614fa7db4d740423e3a, type: 3}
   startTime: {x: 10, y: 0}
-  startPeriodRange: {x: 10000, y: 60}
+  startPeriodRange: {x: 600, y: 600}
   startSpawnCount: 1
-  endTime: {x: 8, y: 0}
-  endPeriodRange: {x: 10000, y: 60}
-  endSpawnCount: 1
-  dontStopSpawning: 0
+  endTime: {x: 20, y: 0}
+  endPeriodRange: {x: 600, y: 600}
+  endSpawnCount: 2
+  dontStopSpawning: 1
 --- !u!1001 &166076420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2232,7 +2232,7 @@ MonoBehaviour:
   levelBarFill: {fileID: 1443721473}
   levelText: {fileID: 1618982830}
   rewardsScreen: {fileID: 2045967390}
-  xpPerLevel: 04000000080000000d0000001100000019000000230000002d00000037000000460000005500000064000000780000008c000000a0000000be000000e60000000e010000360100005e01000086010000ae010000d6010000fe01000030020000
+  xpPerLevel: 04000000080000000d0000001100000019000000230000002d00000037000000460000005500000064000000780000008c000000a0000000be000000e60000000e010000360100005e01000086010000ae010000d6010000fe010000300200006c020000a8020000ee020000200300005203000084030000b6030000e80300004c040000b00400001405000078050000dc05000040060000a4060000080700006c070000d0070000ca080000c4090000
 --- !u!1001 &318259223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8323,8 +8323,8 @@ MonoBehaviour:
   startTime: {x: 3, y: 0}
   startPeriodRange: {x: 2, y: 2.5}
   startSpawnCount: 1
-  endTime: {x: 10, y: 0}
-  endPeriodRange: {x: 1, y: 1.5}
+  endTime: {x: 9, y: 0}
+  endPeriodRange: {x: 0.7, y: 1}
   endSpawnCount: 1
   dontStopSpawning: 1
 --- !u!4 &1007136599 stripped
@@ -9684,6 +9684,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4612174906623930535, guid: 5ed899cf4f3cb5842a7a3a4801c6ff1e, type: 3}
   m_PrefabInstance: {fileID: 625037934}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1238744703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238744704}
+  - component: {fileID: 1238744705}
+  m_Layer: 0
+  m_Name: Easy-9:00+
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1238744704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238744703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410940671}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238744705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238744703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb7669a8941ace4ca253c61a2a5bf91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 7268076642216424836, guid: bbaff2b0bcba2714786593795112538f, type: 3}
+  startTime: {x: 9, y: 0}
+  startPeriodRange: {x: 2, y: 2.5}
+  startSpawnCount: 1
+  endTime: {x: 11, y: 0}
+  endPeriodRange: {x: 2, y: 2.5}
+  endSpawnCount: 2
+  dontStopSpawning: 1
 --- !u!1001 &1242654568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9975,7 +10027,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410940671}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1290913835
 MonoBehaviour:
@@ -10170,7 +10222,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410940671}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1321497077
 MonoBehaviour:
@@ -10577,6 +10629,7 @@ Transform:
   m_Children:
   - {fileID: 90038291}
   - {fileID: 1005000383}
+  - {fileID: 1238744704}
   - {fileID: 1987709209}
   - {fileID: 1830247747}
   - {fileID: 2090966472}
@@ -13624,7 +13677,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410940671}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1830247748
 MonoBehaviour:
@@ -14810,7 +14863,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410940671}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1987709210
 MonoBehaviour:
@@ -14830,7 +14883,7 @@ MonoBehaviour:
   startSpawnCount: 5
   endTime: {x: 1, y: 30}
   endPeriodRange: {x: 60, y: 60}
-  endSpawnCount: 7
+  endSpawnCount: 8
   dontStopSpawning: 1
 --- !u!4 &1988401565 stripped
 Transform:
@@ -15441,7 +15494,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410940671}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2049645835
 MonoBehaviour:
@@ -15622,7 +15675,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410940671}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2090966473
 MonoBehaviour:

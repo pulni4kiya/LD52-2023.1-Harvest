@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 1
   baseDamage: 5
-  baseHealth: 10
+  baseHealth: 15
   type: 1
   bossSpawnee: {fileID: 0}
   visual: {fileID: 7268076642605456166}
