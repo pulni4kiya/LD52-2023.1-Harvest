@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour {
 
 	public bool IsAlive => this.health > 0f;
 
+	public void FillHealth() {
+		this.health = this.maxHealth;
+	}
+
 	private void Awake() {
 		this.rb = this.GetComponent<Rigidbody2D>();
 	}

@@ -39,6 +39,7 @@ public class PlayerLevelController : MonoBehaviour {
 		if (this.playerXp >= nextLevelXp) {
 			this.playerXp -= nextLevelXp;
 			this.playerLevel++;
+			GameManager.Instance.Player.FillHealth();
 			this.ShowLevelUpOptions();
 		}
 		this.UpdateUI();
