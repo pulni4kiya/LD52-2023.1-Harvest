@@ -13,7 +13,7 @@ public class Pistol : WeaponBase {
 
 	protected override void Trigger() {
 		this.InstantiateProjectile(new ProjectileSettings() {
-			Velocity = GameManager.Instance.Player.ProjectileDirection * 5f,
+			Velocity = GameManager.Instance.Player.ProjectileDirection * 20f,
 			DestroyAfterTime = 3f,
 			Size = 1f,
 			SingleTickHit = false
@@ -28,14 +28,14 @@ public class Pistol : WeaponBase {
 	}
 
 	protected override void InitWeaponRewards() {
-		this.damageReward = this.CreateReward(10, "Increase damage by 10%");
+		this.damageReward = this.CreateReward(5, "Increase damage by 20%");
 		this.pierceReward = this.CreateReward(5, "Pierce monsters +1");
-		this.cooldownReward = this.CreateReward(7, "Decrease reload time by 7%");
+		this.cooldownReward = this.CreateReward(7, "Decrease reload time by 10%");
 	}
 
 	protected override void RefreshForUpgrades() {
-		this.damage = this.baseDamage * (1f + this.damageReward.CurrentLevel * 0.1f);
+		this.damage = this.baseDamage * (1f + this.damageReward.CurrentLevel * 0.2f);
 		this.pierce = this.pierceReward.CurrentLevel;
-		this.cooldown = this.baseCooldown * (1f - this.cooldownReward.CurrentLevel * 0.07f);
+		this.cooldown = this.baseCooldown * (1f - this.cooldownReward.CurrentLevel * 0.1f);
 	}
 }

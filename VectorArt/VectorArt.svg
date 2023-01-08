@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,7 +11,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="48"
    inkscape:export-xdpi="48"
-   inkscape:export-filename="G:\Projects\Other Projects\Unity\LD52-2023.1-Harvest\Assets\Sprites\Terrain\Bush.png"
+   inkscape:export-filename="G:\Projects\Other Projects\Unity\LD52-2023.1-Harvest\Assets\Sprites\Weapons\Explosion.png"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="VectorArt.svg"
    id="svg8"
@@ -20,6 +21,23 @@
    width="1024">
   <defs
      id="defs2">
+    <linearGradient
+       osb:paint="gradient"
+       id="linearGradient1956"
+       inkscape:collect="always">
+      <stop
+         id="stop1952"
+         offset="0"
+         style="stop-color:#f7f75d;stop-opacity:1" />
+      <stop
+         style="stop-color:#f7f379;stop-opacity:0.78431373;"
+         offset="0.32078502"
+         id="stop1960" />
+      <stop
+         id="stop1954"
+         offset="1"
+         style="stop-color:#fae7e3;stop-opacity:0;" />
+    </linearGradient>
     <linearGradient
        id="linearGradient1804"
        inkscape:collect="always">
@@ -169,9 +187,9 @@
      showgrid="false"
      inkscape:current-layer="svg8"
      inkscape:document-units="mm"
-     inkscape:cy="1285.417"
-     inkscape:cx="5704.0207"
-     inkscape:zoom="1.4"
+     inkscape:cy="2670.6186"
+     inkscape:cx="2619.1098"
+     inkscape:zoom="0.24748737"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -11059,5 +11077,145 @@ AAAAAElFTkSuQmCC
          d="m 1060.9264,597.21376 56.3938,0.26726 0.1337,-2.80633 h -56.6611 z"
          id="path1538" />
     </g>
+  </g>
+  <g
+     inkscape:export-ydpi="94.522263"
+     inkscape:export-xdpi="94.522263"
+     inkscape:export-filename="G:\Projects\Other Projects\Unity\LD52-2023.1-Harvest\Assets\Sprites\Weapons\PistolProjectile.png"
+     transform="matrix(1.0027502,0,0,0.71460598,-2.3837961,126.28685)"
+     inkscape:label="BulletProjectile"
+     id="layer22">
+    <path
+       sodipodi:nodetypes="cccccc"
+       id="path1868"
+       d="m 860,440 h 10 c 1.18593,0.81655 3.19052,1.28097 3.5431,2.45596 C 873.39672,443.5095 871.18103,444.15199 870,445 h -10 z"
+       style="fill:#ab6a26;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       y="440.02316"
+       x="859.99854"
+       height="5.0191288"
+       width="9.7158241"
+       id="rect1898"
+       style="fill:#c1af2b;fill-opacity:1;stroke:none;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 860,440 h 10 c 1.18593,0.81655 3.19052,1.28097 3.5431,2.45596 C 873.39672,443.5095 871.18103,444.15199 870,445 h -10 z"
+       id="path1888"
+       sodipodi:nodetypes="cccccc" />
+  </g>
+  <g
+     inkscape:export-ydpi="93.3209"
+     inkscape:export-xdpi="93.3209"
+     inkscape:export-filename="G:\Projects\Other Projects\Unity\LD52-2023.1-Harvest\Assets\Sprites\Weapons\GrenadeProjectile.png"
+     transform="matrix(1.9910694,0,0,1.9910694,-852.40869,-450.80548)"
+     inkscape:label="GrenadeProjectile"
+     id="layer23">
+    <path
+       style="fill:#565656;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 860.22208,455 h 10 c 4.6743,1.41421 4.31483,5.26697 0,6.57043 h -10 z"
+       id="path1873"
+       sodipodi:nodetypes="ccccc" />
+    <rect
+       y="455.02155"
+       x="860.27533"
+       height="6.5193129"
+       width="5.2553325"
+       id="rect1878"
+       style="fill:#225e2a;fill-opacity:1;stroke:none;stroke-width:2.07324;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#b9b9b9;fill-opacity:1;stroke:none;stroke-width:1.7672;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1880"
+       width="3.8183153"
+       height="6.5193129"
+       x="865.37592"
+       y="455.06842" />
+    <path
+       transform="scale(0.26458333)"
+       d="m 3285.998,1719.7305 v 24.7871 h 3.0313 c 16.2645,-4.9133 17.6549,-19.4074 0.1367,-24.7871 z"
+       style="fill:#c1af2b;fill-opacity:1;stroke:none;stroke-width:2.64567;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1882" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path1876"
+       d="m 860.22208,455 h 10 c 4.6743,1.41421 4.31483,5.26697 0,6.57043 h -10 z"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <g
+     style="display:none"
+     inkscape:export-ydpi="66.676071"
+     inkscape:export-xdpi="66.676071"
+     inkscape:export-filename="G:\Projects\Other Projects\Unity\LD52-2023.1-Harvest\Assets\Sprites\Weapons\SlashProjectile.png"
+     inkscape:label="Slash"
+     id="layer24">
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="path1901"
+       d="m 872.66013,511.96392 -3.38475,13.0446 3.41511,10.20092 -4.50489,23.62941 9.04036,-23.82434 -3.79434,-11.14534 4.51771,-13.80203 -10.607,-18.12903 z"
+       style="fill:#b2351f;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="ccccccccccccc"
+       id="path1903"
+       d="m 878.48447,485.68695 9.65887,15.67341 1.33821,11.71554 4.55002,10.95536 -3.2022,8.13067 1.5272,11.71528 -8.47976,18.9099 13.96264,-17.21615 -1.33821,-11.71553 3.57522,-11.91092 -5.4952,-11.14313 -1.90567,-12.09276 z"
+       style="fill:#b2351f;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path1905"
+       d="m 894.53363,474.32669 10.98177,15.6717 13.81218,12.26621 -5.64894,15.88239 4.7447,15.30185 -10.93862,17.4012 -16.22557,20.99887 c 0,0 25.30023,-18.55388 26.05543,-19.12184 0.7552,-0.56792 9.98526,-23.82554 9.98526,-23.82554 l -5.87441,-12.08757 8.29178,-18.1537 -14.75759,-12.64295 -13.24025,-8.4872 z"
+       style="fill:#b2351f;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <g
+     id="g1913"
+     inkscape:label="Slash"
+     inkscape:export-filename="G:\Projects\Other Projects\Unity\LD52-2023.1-Harvest\Assets\Sprites\Weapons\SlashProjectile.png"
+     inkscape:export-xdpi="66.676071"
+     inkscape:export-ydpi="66.676071">
+    <path
+       sodipodi:nodetypes="ccccccccccc"
+       id="path1915"
+       d="m 864.32371,495.91082 -3.76497,11.34419 4.16956,9.066 -2.24612,16.6339 3.04601,17.00496 -3.75163,21.54957 8.66383,-22.6899 -4.55644,-15.86907 2.24319,-18.90176 -3.7906,-8.31053 z"
+       style="fill:#b2351f;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="ccccccc"
+       id="path1917"
+       d="m 883.97942,496.64109 -4.50411,24.19638 5.32026,21.9157 -4.12318,26.46373 9.78987,-28.73899 -6.82924,-19.64586 z"
+       style="fill:#b2351f;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="path1929"
+       d="m 900.98588,494.72902 6.4458,15.48861 -3.38055,16.2574 5.69529,19.64735 -9.42028,22.3129 4.12813,-22.68398 -6.07377,-20.02481 5.65089,-14.37049 z"
+       style="fill:#b2351f;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <circle
+     r="148.27583"
+     cy="784.74103"
+     cx="688.99158"
+     id="path1939"
+     style="display:none;fill:#b2351f;fill-opacity:1;stroke:none;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <circle
+     r="70.117363"
+     cy="784.74103"
+     cx="688.99158"
+     id="path1944"
+     style="display:none;fill:#fae7e3;fill-opacity:1;stroke:none;stroke-width:0.7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <g
+     inkscape:export-ydpi="48"
+     inkscape:export-xdpi="48"
+     inkscape:export-filename="G:\Projects\Other Projects\Unity\LD52-2023.1-Harvest\Assets\Sprites\Weapons\Explosion.png"
+     inkscape:label="Explosion"
+     id="layer25">
+    <path
+       sodipodi:nodetypes="cccccccccccscscsccccccccccccccccccc"
+       id="path1950"
+       d="m 656.20261,656.62698 31.61173,56.61991 9.53868,-63.62266 9.68658,49.69954 33.61733,-44.94522 -12.21275,62.55708 60.91436,-17.71933 -25.6118,35.31304 37.95922,5.29584 -34.69756,36.39399 48.66047,13.29997 c 0,0 -53.97585,9.69217 -50.23268,10.75635 3.74316,1.06421 32.1079,27.21962 32.1079,27.21962 0,0 -60.39379,7.02783 -57.72039,7.5589 2.67338,0.53105 28.92719,47.53624 28.92719,47.53624 0,0 -48.15245,-33.61312 -44.93893,-28.80646 3.2135,4.80666 2.21771,60.9346 2.21771,60.9346 l -25.18613,-48.07567 -22.39757,40.65424 -13.95592,-44.34856 -18.66561,33.16581 1.00769,-47.0408 -49.67162,31.06814 26.66552,-47.07429 -42.24252,-10.63564 30.43522,-25.69763 -53.99678,-6.34397 49.15245,-19.3076 -32.63617,-22.40804 36.88038,-2.1863 -26.78554,-44.86635 47.60393,22.92305 -6.47238,-44.35834 29.44359,33.63756 z"
+       style="fill:#f7685d;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="cccccccccccscscsccccccccccccccccccc"
+       style="fill:#f7f55d;fill-opacity:1;stroke:#000000;stroke-width:0.233112px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 658.8138,680.07038 29.74271,46.3717 9.41692,-50.44483 6.98006,32.83312 29.6187,-39.59919 -10.7601,55.11619 53.66887,-15.61169 -22.56539,31.11271 33.44414,4.66592 -35.27559,35.45741 39.05382,10.53854 c 0,0 -39.03181,6.32646 -35.73387,7.26406 3.29792,0.93763 28.2888,23.98197 28.2888,23.98197 0,0 -56.41465,8.33424 -54.05924,8.80214 2.35539,0.46789 26.55202,39.20793 26.55202,39.20793 0,0 -40.28608,-29.08324 -37.4548,-24.84831 2.83127,4.23493 2.58403,49.30829 2.58403,49.30829 l -20.14706,-37.44782 -19.02177,36.21324 -13.55404,-48.5546 -18.57519,35.63814 0.89061,-39.30735 -45.47876,28.39226 25.20914,-42.49455 -36.07375,-9.56282 27.80484,-25.65879 -47.16481,-4.12527 40.76273,-15.26514 -28.18185,-19.61629 31.92123,-2.05266 -24.10834,-39.65619 42.45047,20.32295 -5.31987,-38.19248 25.55876,28.74689 z"
+       id="path1992" />
+    <path
+       id="path1996"
+       d="m 671.82927,712.1538 15.58049,28.37282 13.93118,-29.9545 1.11005,17.20146 14.34771,-10.61485 1.4784,20.71324 30.86082,-10.69388 -11.67513,23.46058 30.56939,1.9088 -32.75035,33.59778 16.36028,3.79366 c 0,0 -15.54414,3.68468 -13.05658,4.39189 2.48754,0.70723 21.33755,18.08902 21.33755,18.08902 0,0 -42.5522,6.28631 -40.77557,6.63924 1.77661,0.35292 8.26001,23.70902 8.26001,23.70902 0,0 -18.61928,-16.07221 -16.48371,-12.87791 2.13555,3.19431 0.57977,29.46586 0.57977,29.46586 l -13.82714,-20.51979 -17.08621,25.89178 -7.48494,-35.20057 -15.08966,19.39884 1.75061,-22.16644 -20.75872,10.67055 5.46984,-21.30757 -28.04814,-3.86417 21.8111,-22.70263 -25.29096,-5.62979 20.46203,-8.99593 -18.47078,-14.53703 21.2913,-1.80733 -8.53633,-23.77253 22.37136,9.18993 -0.0121,-24.83583 15.27784,17.71125 z"
+       style="fill:#fcfbbc;fill-opacity:1;stroke:#000000;stroke-width:0.175831px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccccccscscsccccccccccccccccccc" />
   </g>
 </svg>

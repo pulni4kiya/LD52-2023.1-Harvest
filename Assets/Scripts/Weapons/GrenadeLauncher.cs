@@ -35,9 +35,13 @@ public class GrenadeLauncher : WeaponBase {
 		var time = distance / this.grenadeSpeed;
 
 		var dt = 0f;
+		var lastPosition = start;
 		while (dt < time) {
 			dt += Time.deltaTime;
-			grenade.position = BezierHelper.CalculatePoint(start, controlPoint, target, dt / time);
+			var newPosition = BezierHelper.CalculatePoint(start, controlPoint, target, dt / time);
+			grenade.position = newPosition;
+			grenade.rotation = Quaternion.FromToRotation(Vector3.right, newPosition - lastPosition);
+			lastPosition = newPosition;
 			yield return null;
 		}
 
@@ -56,14 +60,14 @@ public class GrenadeLauncher : WeaponBase {
 	}
 
 	protected override void InitWeaponRewards() {
-		this.damageReward = this.CreateReward(10, "Increase damage by 10%");
-		this.sizeReward = this.CreateReward(10, "Increase hit area by 10%");
-		this.cooldownReward = this.CreateReward(7, "Decrease reload time by 7%");
+		this.damageReward = this.CreateReward(5, "Increase damage by 20%");
+		this.sizeReward = this.CreateReward(7, "Increase hit area by 15%");
+		this.cooldownReward = this.CreateReward(7, "Decrease reload time by 10%");
 	}
 
 	protected override void RefreshForUpgrades() {
-		this.damage = this.baseDamage * (1f + this.damageReward.CurrentLevel * 0.1f);
-		this.size = 1f + this.sizeReward.CurrentLevel * 0.1f;
-		this.cooldown = this.baseCooldown * (1f - this.cooldownReward.CurrentLevel * 0.07f);
+		this.damage = this.baseDamage * (1f + this.damageReward.CurrentLevel * 0.2f);
+		this.size = 1f + this.sizeReward.CurrentLevel * 0.15f;
+		this.cooldown = this.baseCooldown * (1f - this.cooldownReward.CurrentLevel * 0.1f);
 	}
 }
