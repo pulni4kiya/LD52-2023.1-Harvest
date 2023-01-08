@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	public PlayerController Player;
 	public PlayerLevelController LevelController;
 	public MusicManager MusicManager;
+	public List<Vector3> PlayerSpawnPoints;
 
 	public float Time => UnityEngine.Time.timeSinceLevelLoad;
 
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour {
 
 	private void Awake() {
 		Instance = this;
+
+		this.Player.transform.position = this.PlayerSpawnPoints[UnityRandomGenerator.Instance.Next(0, this.PlayerSpawnPoints.Count)];
 	}
 
 	private void OnDestroy() {
