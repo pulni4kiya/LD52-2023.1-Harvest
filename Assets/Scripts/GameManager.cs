@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 	[Header("References")]
 	public PlayerController Player;
 	public PlayerLevelController LevelController;
+	public MusicManager MusicManager;
 
 	public float Time => UnityEngine.Time.timeSinceLevelLoad;
 

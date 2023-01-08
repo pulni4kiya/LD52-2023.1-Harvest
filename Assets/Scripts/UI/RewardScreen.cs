@@ -53,6 +53,7 @@ public class RewardScreen : MonoBehaviour {
 
 		this.gameObject.SetActive(true);
 
+		GameManager.Instance.MusicManager.SetRewardsShowing(true);
 		GameManager.Instance.Pause();
 	}
 
@@ -64,6 +65,7 @@ public class RewardScreen : MonoBehaviour {
 
 		EventSystem.current.SetSelectedGameObject(null);
 
+		GameManager.Instance.MusicManager.SetRewardsShowing(false);
 		GameManager.Instance.Unpause();
 	}
 }
