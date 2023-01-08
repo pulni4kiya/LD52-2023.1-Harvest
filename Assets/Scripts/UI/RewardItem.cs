@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class RewardItem : MonoBehaviour
 {
 	[SerializeField] private Image image;
+	[SerializeField] private TMP_Text titleText;
 	[SerializeField] private TMP_Text descriptionText;
 
 	public event Action<Reward> RewardSelected;
@@ -21,6 +22,7 @@ public class RewardItem : MonoBehaviour
 	public void Initialize(Reward reward) {
 		this.reward = reward;
 		this.image.sprite = reward.Image;
+		this.titleText.text = reward.Title;
 		this.descriptionText.text = reward.Description;
 	}
 

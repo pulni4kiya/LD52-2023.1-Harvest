@@ -82,7 +82,8 @@ public abstract class WeaponBase : MonoBehaviour, IRewardsProvider {
 		this.unlockReward = new Reward() {
 			CurrentLevel = 0,
 			MaxLevel = 1,
-			Description = $"{this.displayName} - {this.description}",
+			Title = this.displayName,
+			Description = this.description,
 			Image = this.image,
 			Provider = this,
 		};
@@ -95,7 +96,8 @@ public abstract class WeaponBase : MonoBehaviour, IRewardsProvider {
 		var reward = new Reward() {
 			CurrentLevel = 0,
 			MaxLevel = maxLevel,
-			Description = $"{this.name} - {description}",
+			Title = this.displayName,
+			Description = description,
 			Image = this.image,
 			Provider = this
 		};

@@ -60,7 +60,7 @@ public class RewardScreen : MonoBehaviour {
 		reward.Provider.ObtainReward(reward);
 		this.gameObject.SetActive(false);
 
-		Debug.Log($"Reward obtained: {reward.Description} - {reward.CurrentLevel} / {reward.MaxLevel}");
+		Debug.Log($"Reward obtained: {reward.Title} - {reward.Description} - {reward.CurrentLevel} / {reward.MaxLevel}");
 
 		EventSystem.current.SetSelectedGameObject(null);
 
@@ -76,6 +76,7 @@ public interface IRewardsProvider {
 public class Reward {
 	public IRewardsProvider Provider;
 	public Sprite Image;
+	public string Title;
 	public string Description;
 	public int CurrentLevel;
 	public int MaxLevel;
