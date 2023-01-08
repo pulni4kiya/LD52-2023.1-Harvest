@@ -5,6 +5,7 @@ using UnityEngine;
 public class GrenadeLauncher : WeaponBase {
 	[SerializeField] private Transform grenadePrefab;
 	[SerializeField] private float grenadeSpeed = 2f;
+	[SerializeField] private AudioClip explosionSound;
 
 	[Header("References")]
 	[SerializeField] private Camera camera;
@@ -17,6 +18,7 @@ public class GrenadeLauncher : WeaponBase {
 	private Reward cooldownReward;
 
 	protected override void Trigger() {
+		this.PlayProjectileSound();
 		StartCoroutine(this.FireGrenade());
 	}
 
@@ -47,6 +49,7 @@ public class GrenadeLauncher : WeaponBase {
 
 		GameObject.Destroy(grenade.gameObject);
 
+		AudioManager2D.instance.PlaySoundWithVariation(this.explosionSound);
 		this.InstantiateProjectile(
 			new ProjectileSettings() {
 				Velocity = Vector3.zero,

@@ -10,6 +10,7 @@ public abstract class WeaponBase : MonoBehaviour, IRewardsProvider {
 	[SerializeField] protected string displayName;
 	[SerializeField] protected string description;
 	[SerializeField] protected Sprite image;
+	[SerializeField] protected AudioClip projectileSound;
 
 	protected float cooldown;
 
@@ -103,6 +104,10 @@ public abstract class WeaponBase : MonoBehaviour, IRewardsProvider {
 		};
 		this.rewards.Add(reward);
 		return reward;
+	}
+
+	protected void PlayProjectileSound() {
+		AudioManager2D.instance.PlaySoundWithVariation(this.projectileSound);
 	}
 
 	protected abstract void OnProjectileHit(ProjectileHitEventArgs args);

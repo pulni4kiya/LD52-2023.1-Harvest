@@ -11,6 +11,7 @@ public class Slash : WeaponBase {
 	private Reward cooldownReward;
 
 	protected override void Trigger() {
+		this.PlayProjectileSound();
 		this.InstantiateProjectile(
 			new ProjectileSettings() {
 				Velocity = Vector3.zero,

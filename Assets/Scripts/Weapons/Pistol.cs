@@ -12,6 +12,7 @@ public class Pistol : WeaponBase {
 	private Reward cooldownReward;
 
 	protected override void Trigger() {
+		this.PlayProjectileSound();
 		this.InstantiateProjectile(new ProjectileSettings() {
 			Velocity = GameManager.Instance.Player.ProjectileDirection * 20f,
 			DestroyAfterTime = 3f,
