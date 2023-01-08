@@ -21,8 +21,11 @@ public class GameManager : MonoBehaviour {
 
 	public bool IsPaused { get; private set; }
 
+	public int BrainsHarvested { get; set; }
+
 	private void Awake() {
 		Instance = this;
+		UnityEngine.Time.timeScale = 1f;
 
 		this.Player.transform.position = this.PlayerSpawnPoints[UnityRandomGenerator.Instance.Next(0, this.PlayerSpawnPoints.Count)];
 	}

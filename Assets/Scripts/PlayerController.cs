@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	public bool IsAlive => this.health > 0f;
+
 	private void Awake() {
 		this.rb = this.GetComponent<Rigidbody2D>();
 	}

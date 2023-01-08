@@ -21,6 +21,8 @@ public class PlayerLevelController : MonoBehaviour {
 
 	private int NextLevelXp => this.xpPerLevel[this.NextLevelIndex];
 
+	public int PlayerLevel => this.playerLevel;
+
 	private void Start() {
 		this.UpdateUI();
 		this.rewardsScreen.ShowRewards();

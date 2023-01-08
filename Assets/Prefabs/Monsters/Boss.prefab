@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7268076642216424837}
   - component: {fileID: 7268076642216424838}
   - component: {fileID: -63525313293590887}
-  - component: {fileID: -4466998558230707635}
+  - component: {fileID: 5464616999497532233}
   m_Layer: 9
-  m_Name: Monster
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7268076642216424839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.578, y: 0.732, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7268076642605456166}
@@ -49,11 +49,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef2fd1f0e5576749b49c7d39c322e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 1
+  baseSpeed: 1.5
   baseDamage: 5
   baseHealth: 10
-  type: 0
-  bossSpawnee: {fileID: 0}
+  type: 2
+  bossSpawnee: {fileID: 7268076642216424836, guid: 50a36c8856fbc014bb650a8edb95a1aa, type: 3}
   visual: {fileID: 7268076642605456166}
 --- !u!50 &7268076642216424837
 Rigidbody2D:
@@ -108,20 +108,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
---- !u!114 &-4466998558230707635
-MonoBehaviour:
+--- !u!111 &5464616999497532233
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7268076642216424839}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 719b96d056997214aaf3d5b3f0bd9662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minScale: 0.8
-  maxScale: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e994908687ea15c4cb8c70873c028039, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e994908687ea15c4cb8c70873c028039, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7268076642605456167
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +230,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c86388d820474d5458d5ac46c63b5b0b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9988584, g: 1, b: 0.514151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -17,6 +17,8 @@ public class MusicManager : MonoBehaviour {
 
 	private float musicVolumeMp;
 
+	public int EliteCount { get; set; }
+
 	public void SetBossInGame(bool value) {
 		this.isBossInGame = value;
 	}
@@ -50,7 +52,7 @@ public class MusicManager : MonoBehaviour {
 	}
 
 	private void Update() {
-		var mainTargetVolume = this.isBossInGame || this.areRewardsShowing ? 0f : 1f;
+		var mainTargetVolume = this.isBossInGame || this.areRewardsShowing || this.EliteCount == 0 ? 0f : 1f;
 		mainTargetVolume *= this.musicVolumeMp;
 		this.musicMain.volume = Mathf.MoveTowards(this.musicMain.volume, mainTargetVolume, 1f * Time.unscaledDeltaTime);
 
